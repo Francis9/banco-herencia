@@ -1,32 +1,37 @@
-package com.curso.banco.report;
+package com.curso.banco;
 
 import com.curso.banco.dominio.Account;
 import com.curso.banco.dominio.ChekingAccount;
 import com.curso.banco.dominio.Customer;
 import com.curso.banco.dominio.SavingAccount;
 
-
-
 public class TestBanking {
 	public static void main(String[] args) {
 
 		// CLiente1
+		System.out.println("Creando usuario Jane Smith");
 		Customer cliente1 = new Customer("Jane ", "Smith");
+		System.out.println("Creando cuenta SaveAccount Jane Smith");
 		SavingAccount cuenta1 = new SavingAccount(500, 3);
-		cliente1.setCuenta(cuenta1);
+		cliente1.addAccount(cuenta1);
 
 		// CLiente2
+		System.out.println("Creando usuario Owen Bryant");
+		System.out.println("Creando cuenta CustomerAaccount Owen Bryant");
 		Customer cliente2 = new Customer("Owen ", "Bryant");
+		System.out.println("Creando cuenta ChekingAccount Owen Bryant");
 		ChekingAccount cuenta2 = new ChekingAccount(500);
-		cliente2.setCuenta(cuenta2);
+		cliente2.addAccount(cuenta2);
 
 		// CLiente3
+		System.out.println("Creando usuario Tim Soley");
 		Customer cliente3 = new Customer("Tim ", "Soley");
 		ChekingAccount cuenta3 = new ChekingAccount(500, 500);
-		cliente3.setCuenta(cuenta3);
+		cliente3.addAccount(cuenta3);
 		// CLiente4
+		System.out.println("Creando usuario Maria Soley");
 		Customer cliente4 = new Customer("Maria ", "Soley");
-		cliente4.setCuenta(cuenta3);
+		cliente4.addAccount(cuenta3);
 
 		// Movimientos cliente1
 
@@ -57,29 +62,8 @@ public class TestBanking {
 		System.out.println("Deposit 150 : " + cuenta3.depositar(150));
 		System.out.println("Withdraw 750 : " + cuenta3.sacar(750));
 		System.out.println(cliente4.toString() + " " + cuenta3.getBalance());
-
 		
-		//Informes
-
-		// PRUEBAS CONSUMO
-		System.out.println("");
-		System.out.println("");
 		
-		Customer clien1 = new Customer("Jane ", "Smith");
-		SavingAccount sa1 = new SavingAccount(500, 3);
-		ChekingAccount cha1 = new ChekingAccount(200);
-		cliente1.addAccount(sa1);
-		cliente1.addAccount(cha1);
-		
-		Customer clien2 = new Customer("Bryant ", "Owen");
-		ChekingAccount cha2 = new ChekingAccount(200);
-		cliente1.addAccount(cha2);
-
-		Customer[] lista = new Customer[2];
-		
-		lista[0] = clien1;
-		lista[1] = clien2;
-		new CustomerReport().informeClientes(lista);
 		
 	}
 }
