@@ -9,7 +9,7 @@ public class CustomerReport {
 		for (Customer f : clientes) {
 
 			System.out.println("Customer :" + f.getFirstname() + f.getLastname());
-System.out.println("aaaa");
+
 		}
 
 	}

@@ -1,10 +1,9 @@
-package com.curso.banco;
+package com.curso.banco.report;
 
 import com.curso.banco.dominio.Account;
 import com.curso.banco.dominio.ChekingAccount;
 import com.curso.banco.dominio.Customer;
 import com.curso.banco.dominio.SavingAccount;
-import com.curso.banco.report.CustomerReport;
 
 
 
