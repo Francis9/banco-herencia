@@ -8,17 +8,8 @@ import com.curso.banco.dominio.SavingAccount;
 
 public class CustomerReport {
 
-	private Bank bank;
 
 	public CustomerReport() {
-	}
-
-	public Bank getBank() {
-		return bank;
-	}
-
-	public void setBank(Bank bank) {
-		this.bank = bank;
 	}
 
 	public void generateReport() {
@@ -26,8 +17,8 @@ public class CustomerReport {
 		System.out.println("CUSTOMERS REPORT");
 		System.out.println("================");
 
-		for (int cust_idx = 0; cust_idx < bank.getNumOfCustomers(); cust_idx++) {
-			Customer customer = bank.getCustomer(cust_idx);
+		for (int cust_idx = 0; cust_idx < Bank.getNumOfCustomers(); cust_idx++) {
+			Customer customer = Bank.getCustomer(cust_idx);
 
 			System.out.println();
 			System.out.println("Customer: " + customer.getLastName() + ", " + customer.getFirstName());

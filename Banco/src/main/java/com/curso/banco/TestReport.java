@@ -15,7 +15,6 @@ public class TestReport {
         
         // run the customer report
         CustomerReport report = new CustomerReport();
-        report.setBank(bank);
         report.generateReport();
     }
     
