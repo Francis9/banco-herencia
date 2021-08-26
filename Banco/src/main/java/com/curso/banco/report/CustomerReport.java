@@ -27,7 +27,7 @@ public class CustomerReport {
 				Account account = customer.getAccount(acct_idx);
 				String account_type = "";
 
-				// Determine the account type
+				
 				if (account instanceof SavingAccount) {
 					account_type = "Savings Account";
 				} else if (account instanceof ChekingAccount) {

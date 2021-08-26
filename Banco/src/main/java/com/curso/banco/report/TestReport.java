@@ -11,7 +11,6 @@ public class TestReport {
 		Bank bank = new Bank();
 		crearClientes(bank);
 
-		// run the customer report
 		CustomerReport report = new CustomerReport();
 		report.generateReport();
 	}
@@ -19,7 +18,6 @@ public class TestReport {
 	private static void crearClientes(Bank bank) {
 		Customer customer;
 
-		// Create several customers and their accounts
 		bank.addCustomer("Jane", "Simms");
 		customer = bank.getCustomer(0);
 		customer.addAccount(new SavingAccount(500.00, 1));
@@ -36,7 +34,7 @@ public class TestReport {
 
 		bank.addCustomer("Maria", "Soley");
 		customer = bank.getCustomer(3);
-		// Maria and Tim have a shared checking account
+		
 		customer.addAccount(bank.getCustomer(2).getAccount(1));
 		customer.addAccount(new SavingAccount(150, 1));
 	}

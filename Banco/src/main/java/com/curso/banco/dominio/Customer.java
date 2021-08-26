@@ -40,6 +40,15 @@ public class Customer {
 	  public Account getAccount(int account_index) {
 	    return accounts[account_index];
 	  }
+
+	@Override
+	public String toString() {
+		return "" + firstName + lastName + "";
+	}
+
+	
+	  
+	  
 	  
 	  
 	}

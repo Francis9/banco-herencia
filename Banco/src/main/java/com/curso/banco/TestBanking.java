@@ -39,7 +39,7 @@ public class TestBanking {
 		System.out.println("Deposit 22.50 : " + cuenta1.depositar(22.50));
 		System.out.println("Withdraw 47.62 : " + cuenta1.sacar(47.62));
 		System.out.println("Withdraw 400 : " + cuenta1.sacar(400));
-		System.out.println(cliente1.toString() + " " + cuenta1.getBalance());
+		System.out.println(cliente1 + " " + cuenta1.getBalance());
 
 		// Movimientos cliente2
 		System.out.println("-------------------");
@@ -47,7 +47,7 @@ public class TestBanking {
 		System.out.println("Deposit 22.50 : " + cuenta2.depositar(22.50));
 		System.out.println("Withdraw 47.62 : " + cuenta2.sacar(47.62));
 		System.out.println("Withdraw 400 : " + cuenta2.sacar(400));
-		System.out.println(cliente2.toString() + " " + cuenta2.getBalance());
+		System.out.println(cliente2.getFirstName() + " " + cuenta2.getBalance());
 
 		// Movimientos cliente3
 		System.out.println("-------------------");
