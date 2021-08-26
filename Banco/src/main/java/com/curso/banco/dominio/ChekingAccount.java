@@ -14,7 +14,7 @@ public class ChekingAccount extends Account{
 		this(initBalance, 0.0);
 	}
 
-	public boolean withdraw(double amount) {
+	public boolean sacar(double amount) {
 		boolean result = true;
 
 		if (balance < amount) {
