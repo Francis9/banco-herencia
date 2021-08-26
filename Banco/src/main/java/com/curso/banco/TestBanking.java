@@ -4,6 +4,9 @@ import com.curso.banco.dominio.Account;
 import com.curso.banco.dominio.ChekingAccount;
 import com.curso.banco.dominio.Customer;
 import com.curso.banco.dominio.SavingAccount;
+import com.curso.banco.report.CustomerReport;
+
+
 
 public class TestBanking {
 	public static void main(String[] args) {
@@ -56,5 +59,28 @@ public class TestBanking {
 		System.out.println("Withdraw 750 : " + cuenta3.sacar(750));
 		System.out.println(cliente4.toString() + " " + cuenta3.getBalance());
 
+		
+		//Informes
+
+		// PRUEBAS CONSUMO
+		System.out.println("");
+		System.out.println("");
+		
+		Customer clien1 = new Customer("Jane ", "Smith");
+		SavingAccount sa1 = new SavingAccount(500, 3);
+		ChekingAccount cha1 = new ChekingAccount(200);
+		cliente1.addAccount(sa1);
+		cliente1.addAccount(cha1);
+		
+		Customer clien2 = new Customer("Bryant ", "Owen");
+		ChekingAccount cha2 = new ChekingAccount(200);
+		cliente1.addAccount(cha2);
+
+		Customer[] lista = new Customer[2];
+		
+		lista[0] = clien1;
+		lista[1] = clien2;
+		new CustomerReport().informeClientes(lista);
+		
 	}
 }
