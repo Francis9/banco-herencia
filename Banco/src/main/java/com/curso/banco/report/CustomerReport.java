@@ -9,9 +9,6 @@ import com.curso.banco.dominio.SavingAccount;
 public class CustomerReport {
 
 
-	public CustomerReport() {
-	}
-
 	public void generateReport() {
 
 		System.out.println("CUSTOMERS REPORT");
@@ -27,13 +24,12 @@ public class CustomerReport {
 				Account account = customer.getAccount(acct_idx);
 				String account_type = "";
 
-				
 				if (account instanceof SavingAccount) {
 					account_type = "Savings Account";
 				} else if (account instanceof ChekingAccount) {
 					account_type = "Checking Account";
 				} else {
-					account_type = "Unknown Account Type";
+					account_type = "Ninguna tipo de cuenta";
 				}
 
 				System.out.println(account_type + ": current balance is " + account.getBalance());

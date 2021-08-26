@@ -35,32 +35,32 @@ public class TestBanking {
 
 		// Movimientos cliente1
 
-		System.out.println("Withdraw 150 : " + cuenta1.sacar(150));
-		System.out.println("Deposit 22.50 : " + cuenta1.depositar(22.50));
-		System.out.println("Withdraw 47.62 : " + cuenta1.sacar(47.62));
-		System.out.println("Withdraw 400 : " + cuenta1.sacar(400));
+		System.out.println("Withdraw 150 : " + cuenta1.withdraw(150));
+		System.out.println("Deposit 22.50 : " + cuenta1.deposit(22.50));
+		System.out.println("Withdraw 47.62 : " + cuenta1.withdraw(47.62));
+		System.out.println("Withdraw 400 : " + cuenta1.withdraw(400));
 		System.out.println(cliente1 + " " + cuenta1.getBalance());
 
 		// Movimientos cliente2
 		System.out.println("-------------------");
-		System.out.println("Withdraw 150 : " + cuenta2.sacar(150));
-		System.out.println("Deposit 22.50 : " + cuenta2.depositar(22.50));
-		System.out.println("Withdraw 47.62 : " + cuenta2.sacar(47.62));
-		System.out.println("Withdraw 400 : " + cuenta2.sacar(400));
+		System.out.println("Withdraw 150 : " + cuenta2.withdraw(150));
+		System.out.println("Deposit 22.50 : " + cuenta2.deposit(22.50));
+		System.out.println("Withdraw 47.62 : " + cuenta2.withdraw(47.62));
+		System.out.println("Withdraw 400 : " + cuenta2.withdraw(400));
 		System.out.println(cliente2.getFirstName() + " " + cuenta2.getBalance());
 
 		// Movimientos cliente3
 		System.out.println("-------------------");
-		System.out.println("Withdraw 150 : " + cuenta3.sacar(150));
-		System.out.println("Deposit 22.50 : " + cuenta3.depositar(22.50));
-		System.out.println("Withdraw 47.62 : " + cuenta3.sacar(47.62));
-		System.out.println("Withdraw 400 : " + cuenta3.sacar(400));
+		System.out.println("Withdraw 150 : " + cuenta3.withdraw(150));
+		System.out.println("Deposit 22.50 : " + cuenta3.deposit(22.50));
+		System.out.println("Withdraw 47.62 : " + cuenta3.withdraw(47.62));
+		System.out.println("Withdraw 400 : " + cuenta3.withdraw(400));
 		System.out.println(cliente3.toString() + " " + cuenta3.getBalance());
 
 		// Movimientos cliente3
 		System.out.println("-------------------");
-		System.out.println("Deposit 150 : " + cuenta3.depositar(150));
-		System.out.println("Withdraw 750 : " + cuenta3.sacar(750));
+		System.out.println("Deposit 150 : " + cuenta3.deposit(150));
+		System.out.println("Withdraw 750 : " + cuenta3.withdraw(750));
 		System.out.println(cliente4.toString() + " " + cuenta3.getBalance());
 		
 		

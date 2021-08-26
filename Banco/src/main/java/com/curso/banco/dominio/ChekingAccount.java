@@ -14,22 +14,20 @@ public class ChekingAccount extends Account{
 		this(initBalance, 0.0);
 	}
 
-	public boolean sacar(double amount) {
-		boolean result = true;
+	 
+	    public void withdraw(double amt) throws OverdraftException {
+	        if (amt > 0 && this.balance - amt >= 0 - this.overdraftAmount) {
+	            if (this.balance - amt < 0) {
+	                this.overdraftAmount += this.balance - amt;;
+	                this.balance = 0;
+	            } else {
+	                this.balance = this.balance - amt;
+	            }
+	        } else {
+	            throw new OverdraftException(" Insufficient funds for overdraft protection!", Math.abs(this.balance - amt));
+	        }
 
-		if (balance < amount) {
-			double overdraftNeeded = amount - balance;
-			if (overdraftAmount < overdraftNeeded) {
-				result = false;
-			} else {
-				balance = 0.0;
-				overdraftAmount -= overdraftNeeded;
-			}
-		} else {
-			balance -= amount;
-		}
-		return result;
-	}
+	    }
 
 	
 

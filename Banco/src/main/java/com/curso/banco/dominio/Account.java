@@ -13,21 +13,22 @@ public class Account {
 		return balance;
 	}
 
-	public boolean sacar(double cantidad) {
+	public void withdraw(double cantidad) throws OverdraftException {
+
+		
 
 		if (this.balance >= cantidad) {
 			this.balance = this.balance - cantidad;
-			return true;
-		}
-
-		return false;
+	        } else {
+	            throw new OverdraftException("Insufficient funds", Math.abs(this.balance - cantidad));
+	        }
 
 	}
 
-	public boolean depositar(double cantidad) {
+	public void deposit(double cantidad) {
 
 		this.balance = this.balance + cantidad;
-		return true;
+
 	}
 
 	
